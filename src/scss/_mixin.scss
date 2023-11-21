@@ -1,0 +1,45 @@
+// grid mixin
+$container-padding-x: 1.5rem;
+$padding-button: 8px 28px;
+
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin custom-transition($property, $duration, $timing) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+}
+
+@mixin button-outline() {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $blue-dark;
+  background-color: $white;
+  padding: $padding-button;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $blue-dark;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+}
+@mixin button-outline-hover() {
+  color: $white;
+  background-color: $blue-dark;
+  border-color: $blue-dark;
+}
+
+@mixin button-gradient() {
+  @include button-outline;
+  border-color: transparent;
+  background: linear-gradient(to bottom, $yellow-light-ex, $yellow-light)
+    border-box;
+}

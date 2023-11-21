@@ -1,0 +1,32 @@
+$font-name: "Poppins";
+
+// colors palette
+$white: #ffffff;
+$black: #000000;
+$blue: #3955ae;
+$blue-dark: #1a2b5f;
+$yellow: #f5a22e;
+$yellow-light: #ffc97c;
+$yellow-light-ex: #ffea7b;
+$red: #d9473a;
+$pink: #d2698f;
+$pink-light: #c1aaba;
+$gray: #818697;
+
+$bodyColor: $white;
+
+// grid breakpoints
+$screen-xs: 0;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1400px;
+
+// container breakpoint
+$container-xs: 0;
+$container-sm: 540px;
+$container-md: 720px;
+$container-lg: 960px;
+$container-xl: 1140px;
+$container-xxl: 1320px;

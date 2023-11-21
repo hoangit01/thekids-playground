@@ -1,0 +1,15 @@
+{
+  "name": "thekids-playground",
+  "version": "1.0.0",
+  "description": "Landing page - The Kids Playground",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss/style.scss:build/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Khai Hoang",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}
