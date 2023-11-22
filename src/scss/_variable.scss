@@ -1,4 +1,6 @@
 $font-name: "Poppins";
+// font-awesome icons
+$fa-font-path: "../webfonts";
 
 // colors palette
 $white: #ffffff;
@@ -10,8 +12,9 @@ $yellow-light: #ffc97c;
 $yellow-light-ex: #ffea7b;
 $red: #d9473a;
 $pink: #d2698f;
-$pink-light: #c1aaba;
+$pink-light: #ff97c3;
 $gray: #818697;
+$gray-light: #f5f2f7;
 
 $bodyColor: $white;
 
@@ -30,3 +33,17 @@ $container-md: 720px;
 $container-lg: 960px;
 $container-xl: 1140px;
 $container-xxl: 1320px;
+
+// spacing
+$sizes: 1rem;
+$spacing-sizes: (
+  0: 0rem,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 2rem,
+  5: 4rem,
+  6: 8rem,
+) !default;
+
+$spacing-important: false !default;

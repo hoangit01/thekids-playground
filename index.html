@@ -7,15 +7,17 @@
     <title>The Kids Playground - Landing page</title>
     <link rel="shortcut icon" href="favicon-dark.ico" type="image/x-icon">
 
+    <!-- Libs CSS -->
+    <!-- FontAwesome v5 -->
+
     <!-- GG Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <!-- My Styles-->
-    <link rel="stylesheet" href="build/css/style.css">
-    <!-- <link rel="stylesheet" href="src/scss/style.css"> -->
+    <!-- My Styles link -->
+    <link rel="stylesheet" href="/build/css/style.css">
 
 </head>
 
@@ -30,7 +32,9 @@
                 </div>
                 <div class="header__nav">
                     <ul class="header__nav__link">
-                        <li><a href="#" aria-label="Link menu">Events</a></li>
+                        <li><a href="#" aria-label="Link menu">Events
+                                <i class="far fa-chevron-down"></i>
+                            </a></li>
                         <li><a href="#" aria-label="Link menu">Pricing</a></li>
                         <li><a href="#" aria-label="Link menu">Blog</a></li>
                     </ul>
@@ -58,8 +62,71 @@
                 </div>
             </div>
         </section>
+        <section class="features">
+            <div class="container">
+                <div class="features__grid">
+                    <div class="features__box">
+                        <div class="features__box__image bg-pink">
+                            <span> &nbsp; </span>
+                        </div>
+                        <div class="features__box__title">
+                            <h2 class="title">Safe Rides</h2>
+                        </div>
+                        <div class="features__box__cta">
+                            <a href="#" aria-label="go to link">
+                                CC Certified <i class="fad fa-long-arrow-alt-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="features__box">
+                        <div class="features__box__image bg-red">
+                            <span> &nbsp; </span>
+                        </div>
+                        <div class="features__box__title">
+                            <h2 class="title">Delicious Foods</h2>
+                        </div>
+                        <div class="features__box__cta">
+                            <a href="#" aria-label="go to link">
+                                Gluten Free <i class="fad fa-long-arrow-alt-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="features__box">
+                        <div class="features__box__image bg-blue">
+                            <span> &nbsp; </span>
+                        </div>
+                        <div class="features__box__title">
+                            <h2 class="title">Entertainment</h2>
+                        </div>
+                        <div class="features__box__cta">
+                            <a href="#" aria-label="go to link">
+                                Suitable for kids <i class="fad fa-long-arrow-alt-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="features__box">
+                        <div class="features__box__image bg-yellow">
+                            <span> &nbsp; </span>
+                        </div>
+                        <div class="features__box__title">
+                            <h2 class="title">Ice-Cream</h2>
+                        </div>
+                        <div class="features__box__cta">
+                            <a href="#" aria-label="go to link">
+                                No Synthetic<i class="fad fa-long-arrow-alt-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer></footer>
+
+    <!-- Libs JS -->
+    <!-- My JS file-->
+    <script src="./src/js/app.js"></script>
 </body>
 
 </html>
