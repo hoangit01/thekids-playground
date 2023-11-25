@@ -105,8 +105,10 @@ header {
   }
 }
 .btn-gradient {
-  @include button-gradient;
+  @include button-gradient();
   &:hover {
+    @include button-gradient();
+    box-shadow: 0px 12px 4rem 0px $yellow-light-ex;
   }
 }
 
@@ -149,9 +151,11 @@ header {
   .features__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
+    gap: 2.5rem;
   }
   .features__box {
+    width: 100%;
+    transition: all 200ms ease-in;
     background-color: #ffffff;
     padding-inline: 3rem;
     padding-block: 2rem 3rem;
@@ -161,13 +165,13 @@ header {
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
     &:first-child {
-      box-shadow: rgb(255, 150, 194, 20%) 0px 88px 10rem 0px;
+      box-shadow: rgb(255, 150, 194, 20%) 0px 88px 8rem 0px;
       .features__box__image {
         @include custom-background-color(#ff97c3);
       }
     }
     &:nth-child(2) {
-      box-shadow: rgb(255, 110, 107, 20%) 0px 88px 10rem 0px;
+      box-shadow: rgb(255, 110, 107, 20%) 0px 88px 8rem 0px;
 
       .features__box__image {
         @include custom-background-color(#ff706d);
@@ -175,14 +179,14 @@ header {
     }
 
     &:nth-child(3) {
-      box-shadow: rgb(133, 151, 255, 20%) 0px 88px 10rem 0px;
+      box-shadow: rgb(133, 151, 255, 20%) 0px 88px 8rem 0px;
 
       .features__box__image {
         @include custom-background-color(#8598ff);
       }
     }
     &:last-child {
-      box-shadow: rgb(255, 200, 122, 20%) 0px 88px 10rem 0px;
+      box-shadow: rgb(255, 200, 122, 20%) 0px 88px 8rem 0px;
 
       .features__box__image {
         @include custom-background-color(#ffc87a);
@@ -192,7 +196,8 @@ header {
     .features__box__image {
       background-color: lightblue;
       width: 100%;
-      height: 22rem;
+      min-height: 22rem;
+      height: auto;
       border-radius: 40px;
       -webkit-border-radius: 40px;
       -moz-border-radius: 40px;
@@ -208,19 +213,84 @@ header {
         -o-border-radius: inherit;
       }
     }
-    .features__box__title {
-      padding-top: 3rem;
-      .title {
-        color: $blue-dark;
-        font-weight: 500;
+    .features__box__content {
+      margin-top: 3rem;
+      padding-inline: 0.5rem;
+      .features__box__title {
+        .title {
+          font-size: 2.2rem;
+          font-weight: 600;
+          color: $blue-dark;
+        }
+      }
+      .features__box__cta {
+        padding-top: 1.6rem;
+        font-weight: 400;
+        color: #979fb7;
+        a > i {
+          margin-left: 2rem;
+        }
       }
     }
-    .features__box__cta {
-      padding-top: 2rem;
-      color: $gray;
-      a > i {
-        margin-left: 2rem;
+  }
+}
+
+// Vision
+.vision {
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+  .vision__grid {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+  }
+  .vision__box__left {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: #fff8de;
+    border-radius: 40px 40px 0 0;
+
+    .vision__box__left__image {
+      height: 620px;
+      img {
+        width: 100%;
       }
+    }
+  }
+  .vision__box__right {
+    width: 100%;
+    padding: 10px;
+    .vision__box__right__title {
+      font-size: 3.6rem;
+      font-weight: 600;
+      color: $blue-dark;
+    }
+    .vision__box__right__desc {
+      max-width: 90%;
+      padding-top: 2.5rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.8;
+      color: $gray;
+    }
+    .vision__box__right__feature {
+      padding-top: 3.5rem;
+      width: 100%;
+      .vision__feature__op1 {
+        li:not(:last-child) {
+          padding-bottom: 3rem;
+        }
+        a {
+          color: $blue-dark;
+          font-size: 1.6rem;
+          font-weight: bold;
+          border-bottom: 2px solid $blue-dark;
+        }
+      }
+    }
+    .vision__box__right__cta {
+      padding-top: 5rem;
     }
   }
 }

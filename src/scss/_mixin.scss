@@ -37,11 +37,12 @@ $padding-button: 8px 28px;
   border-color: $blue-dark;
 }
 
-@mixin button-gradient() {
+@mixin button-gradient($color: #fdedb8) {
   @include button-outline;
   border-color: transparent;
   background: linear-gradient(to bottom, $yellow-light-ex, $yellow-light)
     border-box;
+  box-shadow: 0px 12px 4rem 0px $color;
 }
 
 @mixin custom-background-color($color: $black) {
