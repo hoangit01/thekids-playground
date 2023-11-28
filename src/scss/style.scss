@@ -243,6 +243,12 @@ header {
     display: flex;
     align-items: center;
     gap: 6rem;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    &:not(:first-child) {
+      margin-top: 25rem;
+    }
   }
   .vision__box__left {
     width: 100%;
@@ -277,15 +283,50 @@ header {
     .vision__box__right__feature {
       padding-top: 3.5rem;
       width: 100%;
-      .vision__feature__op1 {
+      .vision__feature__opt1 {
         li:not(:last-child) {
-          padding-bottom: 3rem;
+          margin-bottom: 3rem;
         }
         a {
           color: $blue-dark;
           font-size: 1.6rem;
           font-weight: bold;
           border-bottom: 2px solid $blue-dark;
+        }
+      }
+      .vision__feature__opt2 {
+        display: block;
+        position: relative;
+        list-style-type: none;
+        li:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+        li {
+          color: $blue-dark;
+          font-size: 1.6rem;
+          font-weight: bold;
+          padding-left: 4rem;
+          &:first-child::before {
+            background-color: $pink-vs;
+          }
+          &:nth-child(2)::before {
+            background-color: $green-vs;
+          }
+          &:nth-child(3)::before {
+            background-color: $blue-vs;
+          }
+          &:last-child::before {
+            background-color: $red-vs;
+          }
+        }
+        li::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          background-color: $blue;
+          height: 24px;
+          width: 24px;
+          border-radius: 50%;
         }
       }
     }
